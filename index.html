@@ -1,0 +1,305 @@
+<html>
+ <head>
+   <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+   <script type='text/javascript'>
+    google.load('visualization', '1', {'packages': ['geochart']});
+    google.load('visualization', '1', {'packages': ['table']});
+    google.setOnLoadCallback(drawWorld);
+
+     var g_product_id; 
+     var g_location_id;
+     function locationid(id)
+     {g_location_id = id;
+
+     }
+     function productid(id){
+       g_product_id = id;
+
+       //alert("id is :" + g_product_id);
+       drawPH();
+     }
+
+     function drawPH() {
+     var data = google.visualization.arrayToDataTable([
+       ['Latitude',   'Longitude', 'Location:Requests'],
+       [11.25, 125, "Tacloban Requests- Food:1611   Water:108652    Medicine:2146    Clothing:1636"]
+     ]);
+     
+     var options = {
+       region: "PH",
+       displayMode: 'markers',
+       colorAxis: {colors: ['red', 'black']}
+     };
+
+     var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+     chart.draw(data, options);
+ 
+     var tabledata = google.visualization.arrayToDataTable([
+       ['Product',   'Quantity', 'Unit'],
+       ['Food',	 1611,'lb'],
+['Water',	  108652,'liter'],
+['Medicine',    2146,'Bottle'],
+['Clothing',    1636,'Shirt']
+     ]);
+ 
+ visualization = new google.visualization.Table(document.getElementById('table'));
+ visualization.draw(tabledata, null);
+ 
+   };
+   function drawTH(){
+     var data = google.visualization.arrayToDataTable([
+       ['Latitude',   'Longitude', 'Requests'],
+       [11.25, 125, "Tacloban Requests- Food:1611   Water:108652    Medicine:2146    Clothing:1636"]
+       ]);
+     var options = {
+       region: "TH",
+       displayMode: 'markers',
+       colorAxis: {colors: ['red', 'black']}
+     };
+     var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+     chart.draw(data, options);
+
+ var tableheml = "<table>"
+   }
+   function drawWorld(){
+     var data = google.visualization.arrayToDataTable([
+       ['Latitude',   'Longitude', 'City'],
+       [11.25, 125, "Tacloban"],
+       [1.283, 108.833, "Singapore "],
+       [48.8567, 2.3508, "Paris "],
+       [40.67, -73.94, "New York "],
+       [35.689506, 139.6917, "Tokyo"]
+
+       ]);
+     var options = {
+       displayMode: 'markers',
+       colorAxis: {colors: ['red', 'blue']}
+     };
+     var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+     chart.draw(data, options);
+ 
+       var tabledata = google.visualization.arrayToDataTable([
+       ['Product',   'Quantity', 'Unit'],
+       ['Food',	 1611,'lb'],
+['Water',	  108652,'liter'],
+['Medicine',    2146,'Bottle'],
+['Clothing',    400,'Shirt']
+     ]);
+ 
+ visualization = new google.visualization.Table(document.getElementById('table'));
+ visualization.draw(tabledata, null);
+
+
+   }
+function drawAsia(){
+     var data = google.visualization.arrayToDataTable([
+       ['Latitude',   'Longitude', 'City'],
+       [11.25, 125, "Tacloban "],
+       [1.283, 108.833, "Singapore"],
+       [35.689506, 139.6917, "Tokyo"]
+
+       ]);
+     var options = {
+       region: 142,
+       displayMode: 'markers',
+       colorAxis: {colors: ['red', 'black']}
+     };
+     var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+     chart.draw(data, options);
+ 
+     var tabledata = google.visualization.arrayToDataTable([
+       ['Product',   'Quantity', 'Unit'],
+       ['Food',	 4833,'lb'],
+['Water',	  325956,'liter'],
+['Medicine',    6138,'Bottle'],
+['Clothing',    1636,'Shirt']
+     ]);
+ 
+ visualization = new google.visualization.Table(document.getElementById('table'));
+ visualization.draw(tabledata, null);
+
+
+   }
+   function drawAfrica(){
+     var data = google.visualization.arrayToDataTable([
+       ['Latitude',   'Longitude', 'Requests'],
+       [11.25, 125, ""]
+               ]);
+     var options = {
+       region: "002",
+       displayMode: 'markers',
+       colorAxis: {colors: ['red', 'black']}
+     };
+     var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+     chart.draw(data, options);
+
+       var tabledata = google.visualization.arrayToDataTable([
+       ['Product',   'Quantity', 'Unit'],
+       ['Food',	 0,'lb'],
+['Water',	  0,'liter'],
+['Medicine',    0,'Bottle'],
+['Clothing',    0,'Shirt']
+     ]);
+ 
+ visualization = new google.visualization.Table(document.getElementById('table'));
+ visualization.draw(tabledata, null);
+
+   }
+   function drawAmericas(){
+     var data = google.visualization.arrayToDataTable([
+       ['Latitude',   'Longitude', 'Requests'],
+       
+       [40.67, -73.94, "New York"]
+
+       ]);
+     var options = {
+       region: "US",
+       displayMode: 'markers',
+       colorAxis: {colors: ['red', 'black']}
+     };
+     var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+     chart.draw(data, options);
+
+ var tabledata = google.visualization.arrayToDataTable([
+       ['Product',   'Quantity', 'Unit'],
+       ['Food',	 211,'lb'],
+['Water',	    3252,'liter'],
+['Medicine',    2134,'Bottle'],
+['Clothing',   21636,'Shirt']
+     ]);
+ 
+ visualization = new google.visualization.Table(document.getElementById('table'));
+ visualization.draw(tabledata, null);
+
+   }
+   function drawEurope(){
+     var data = google.visualization.arrayToDataTable([
+       ['Latitude',   'Longitude', 'Requests'],
+     
+       
+       [48.8567, 2.3508, "Paris"]
+
+       ]);
+     var options = {
+       region: 150,
+       displayMode: 'markers',
+       colorAxis: {colors: ['red', 'black']}
+     };
+     var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+     chart.draw(data, options);
+ 
+     var tabledata = google.visualization.arrayToDataTable([
+       ['Product',   'Quantity', 'Unit'],
+       ['Food',	 2622,'lb'],
+['Water',	  208652,'liter'],
+['Medicine',    2246,'Bottle'],
+['Clothing',    2636,'Shirt']
+     ]);
+ 
+ visualization = new google.visualization.Table(document.getElementById('table'));
+ visualization.draw(tabledata, null);
+
+
+   }
+   function drawOceania(){
+     var data = google.visualization.arrayToDataTable([
+       ['Latitude',   'Longitude', 'Requests'],
+       [11.25, 125, "Tacloban"]
+       
+       ]);
+     var options = {
+       region: "009",
+       displayMode: 'markers',
+       colorAxis: {colors: ['red', 'black']}
+     };
+     var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+     chart.draw(data, options);
+
+     var tabledata = google.visualization.arrayToDataTable([
+       ['Product',   'Quantity', 'Unit'],
+       ['Food',	 1611,'lb'],
+['Water',	  108652,'liter'],
+['Medicine',    2146,'Bottle'],
+['Clothing',    1636,'Shirt']
+     ]);
+ 
+ visualization = new google.visualization.Table(document.getElementById('table'));
+ visualization.draw(tabledata, null);
+
+ 
+   }
+   function drawSEAsia(){
+     var data = google.visualization.arrayToDataTable([
+       ['Latitude',   'Longitude', 'Requests'],
+       [11.25, 125, "Tacloban"],
+       [1.283, 108.833, "Singapore"]
+       
+       ]);
+     var options = {
+       region: "035",
+       displayMode: 'markers',
+       colorAxis: {colors: ['red', 'black']}
+     };
+     var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+     chart.draw(data, options);
+
+
+     var tabledata = google.visualization.arrayToDataTable([
+       ['Product',   'Quantity', 'Unit'],
+       ['Food',	 3222,'lb'],
+['Water',	  2017304,'liter'],
+['Medicine',    4292,'Bottle'],
+['Clothing',    3272,'Shirt']
+     ]);
+ 
+ visualization = new google.visualization.Table(document.getElementById('table'));
+ visualization.draw(tabledata, null);
+ 
+   }
+   </script>
+ </head>
+ 
+ 
+ <body>
+
+
+
+
+
+
+<div>
+   <table style="float: left; padding: 0px 10px;">
+    <tr><td>
+     <button type="button" onclick="drawWorld()">World</button>
+    </td><td>
+     <button type="button" onclick="drawAfrica()">Africa</button>
+    </td><td>
+     <button type="button" onclick="drawAmericas()">America</button>
+    </td><td>
+     <button type="button" onclick="drawEurope()">Europe</button>
+    </td><td>
+     <button type="button" onclick="drawOceania()">Oceania</button>
+    </td><td>
+     <button type="button" onclick="drawSEAsia()">SE Asia</button>
+    </td><td>
+     <button type="button" onclick="drawPH()">Phillipines</button>
+   </td></tr>
+</table>
+
+<table border="1">
+<tr><td>
+<div id="chart_div" style="float: left; width: 250px; height: 250px; padding: 0px 10px;"></div>
+</td><td>
+<table><th>Requested Summary</th>
+<tr><td>
+<div id="table" style="float: left; width: 250px; height: 250px; padding: 0px 10px;"></div>
+</td></tr>
+  </table>
+</td></tr>
+</table>
+
+</div>
+
+</div>
+ </body>
+</html>
